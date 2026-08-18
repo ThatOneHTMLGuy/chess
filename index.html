@@ -8,7 +8,10 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Play Chess</h1>
+    <h1>
+      Play Chess
+      <img src="favicon.png" alt="Chess" class="title-icon">
+</h1>
 
         <!-- Controls: New Game button placed here so it appears next to AI toggle (script will append AI controls) -->
     <div class="controls">
@@ -25,7 +28,17 @@
     <div id="board" class="board" aria-label="Chess board"></div>
   </div>
 
-  <!-- Scripts: your script.js expects these DOM elements. It safely initializes on DOMContentLoaded. -->
-  <script src="script.js"></script>
+  <!-- Scripts: split by responsibility, loaded in dependency order, from
+       the js/ folder. Classic (non-module) scripts share one global scope,
+       so later files can use functions/variables declared in earlier ones.
+       safeInit() in main.js waits for DOMContentLoaded before touching
+       the DOM. -->
+  <script src="js/state.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
