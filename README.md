@@ -59,6 +59,11 @@ No build step, no dependencies — just open `index.html`.
 - **AI opponent**: toggle on/off, pick which color it plays, and choose
   a search depth (1–6) from the controls above the board.
 
+# 🔴 Live Demo
+
+- **[Chess](https://thatonehtmlguy.github.io/chess/)**
+
+
 ## How the AI works
 
 The AI is a classical alpha-beta search, not a neural engine:
